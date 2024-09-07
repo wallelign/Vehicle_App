@@ -31,8 +31,8 @@ Route::middleware(['auth:sanctum', 'role:admin'])->group(function () {
 
 // Routes accessible to 'driver'
 Route::middleware(['auth:sanctum', 'role:driver'])->group(function () {
-    Route::get('/vehicles', [VechileController::class, 'index']); // List all vehicles
-    Route::get('/vehicles/{id}', [VechileController::class, 'show']); // Get a single vehicle by ID
+    Route::get('/vehicles', [VechileController::class, 'index']); 
+    Route::get('/vehicles/{id}', [VechileController::class, 'show']); 
 });
 
 // Routes accessible to 'admin' and 'driver'
